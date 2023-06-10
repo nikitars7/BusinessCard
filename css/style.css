@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-famile: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("../../fonts/fonts/icons.ttf?cuws2l") format("truetype"), url("../../fonts/fonts/icons.woff?cuws2l") format("woff"), url("../../fonts/fonts/icons.svg?cuws2l#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=_icon-], [class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow:before {
+  content: "\e900";
+}
+
+._icon-github:before {
+  content: "\e901";
+}
+
+._icon-inst:before {
+  content: "\e902";
+}
+
+._icon-link:before {
+  content: "\e903";
+}
+
+._icon-linked:before {
+  content: "\e904";
+}
+
+._icon-twitter:before {
+  content: "\e905";
+}
+
+.title__label {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 7.5px;
+  color: #656d72;
+  padding-left: 35px;
+}
+.title__label::before {
+  content: "";
+  width: 16px;
+  height: 2px;
+  background-color: #D9D9D9;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.title__label:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.title__subtitle {
+  font-family: "Plus Jakarta Sans";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.title__subtitle span {
+  color: #7E74F1;
+}
+.title__subtitle_big {
+  font-size: 44px;
+  line-height: 1.25;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+  min-height: 123px;
+}
+@media (max-width: 768px) {
+  .header__content {
+    min-height: 60px;
+  }
+}
+.header__content .header__logo {
+  position: relative;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #232e35;
+  font-weight: 700;
+}
+.header__content .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__content .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: calc(35px + 36 * (100vw - 768px) / 1152);
+     -moz-column-gap: calc(35px + 36 * (100vw - 768px) / 1152);
+          column-gap: calc(35px + 36 * (100vw - 768px) / 1152);
+}
+@media (max-width: 768px) {
+  .header__content .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+  }
+}
+.header__content .menu__link {
+  color: #232e35;
+  font-weight: 500;
+  line-height: 1.2;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .header__content .menu__link:hover {
+    color: #7E74F1;
+  }
+}
+.header__content .header__button {
+  color: #232e35;
+  padding: 16px 24px;
+  border: 1px solid #F1F1F1;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .header__content .header__button:hover {
+    background-color: #7E74F1;
+    border: 1px solid #7E74F1;
+    color: #fff;
+  }
+}
+@media (max-width: 767px) {
+  .header__content .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+  }
+  .header__content .menu__icon::before,
+.header__content .menu__icon::after,
+.header__content .menu__icon span {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #000;
+  }
+  .header__content .menu__icon.active::before,
+.header__content .menu__icon.active::after,
+.header__content .menu__icon.active span {
+    background-color: #fff;
+  }
+  .header__content .menu__icon::before,
+.header__content .menu__icon::after {
+    content: "";
+  }
+  .header__content .menu__icon::before {
+    top: 0;
+  }
+  .header__content .menu__icon::after {
+    bottom: -2px;
+  }
+  .header__content .menu__icon span {
+    top: 50%;
+    -webkit-transform: scale(1) traslate(0px, -50%);
+            transform: scale(1) traslate(0px, -50%);
+  }
+  .header__content .menu__icon.active span {
+    -webkit-transform: scale(0) translate(0px, -50%);
+            transform: scale(0) translate(0px, -50%);
+  }
+  .header__content .menu__icon.active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+            transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .header__content .menu__icon.active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+            transform: rotate(45deg) translate(0px, 50%);
+  }
+  .header__content .menu__body {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 100px 30px 30px 30px;
+    -webkit-transition: top 0.3s ease 0s;
+    transition: top 0.3s ease 0s;
+    overflow: auto;
+  }
+  .header__content .menu__body.active {
+    top: 0;
+  }
+  .header__content .menu__body::before {
+    content: "";
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+  }
+  .header__content .menu__list > li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .header__content .menu__list > li:last-child {
+    margin-bottom: 0;
+  }
+  .header__content .menu__link {
+    font-size: 24px;
+    color: #fff;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px auto;
+}
