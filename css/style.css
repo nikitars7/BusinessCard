@@ -154,6 +154,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: #656d72;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -174,6 +181,8 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
   gap: 15px;
   min-height: 123px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 @media (max-width: 768px) {
   .header__content {
@@ -378,4 +387,85 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0px auto;
+}
+
+.main-section__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+}
+
+.main-section__title {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.main-section__text {
+  margin-bottom: 40px;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: calc(15px + 19 * (100vw - 768px) / 1152);
+     -moz-column-gap: calc(15px + 19 * (100vw - 768px) / 1152);
+          column-gap: calc(15px + 19 * (100vw - 768px) / 1152);
+}
+
+.social__link {
+  font-size: 22px;
+  color: #232E35;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .social__link:hover {
+    color: #7E74F1;
+  }
+}
+
+.main-section__decor {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  max-width: 336px;
+  width: 100%;
+}
+
+.main-section__image {
+  position: relative;
+  padding-bottom: 119%;
+}
+.main-section__image::before, .main-section__image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+.main-section__image::before {
+  z-index: 1;
+  background-color: #7E74F1;
+  -webkit-transform: rotate(-9.55deg);
+          transform: rotate(-9.55deg);
+}
+.main-section__image::after {
+  z-index: 2;
+  background: #EAE6FE url("../../img/mainsection/lines.png") top right no-repeat;
+}
+
+.main-section__picture {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
 }
