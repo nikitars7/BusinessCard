@@ -17,7 +17,7 @@ body{
 	max-width: 1440px;
 	display: flex;
 	flex-direction:column;
-	overflow: hidden;
+	overflow: auto;
 	margin: 0px auto;
 }
 .container{
@@ -37,8 +37,10 @@ margin: 0px auto;
 	align-items: center;
 	padding-top:calc(30px + (80 - 30) * ((100vw - 768px)/(1920 - 768)));
 	padding-bottom:30px;
+	column-gap: 20px;
 }
-.main-section__content {}
+.main-section__content {
+}
 .main-section__title {
 	margin-top: 16px;
 	margin-bottom: 32px;
@@ -64,6 +66,7 @@ transition: color 0.3s ease 0s;
 	justify-self: end;
 	max-width: 336px;
 	width: 100%;
+	margin-right: 30px;
 }
 .main-section__box{
 	//margin : 0 0 0 auto;
