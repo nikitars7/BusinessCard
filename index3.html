@@ -4,7 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -102,9 +106,76 @@
           </div>
        	 </div>
        </section>
+        <section class="page__portfolio portfolio">
+       	<div class="portfolio__container container">
+       		<div class="portfolio__header">
+       			<div class="portfolio__title title">
+     		      <div class="title__label"> MY WORKS</div>
+     		      <div class="title__subtitle">Featured Portfolios </div>
+     	        </div>
+     	        <div class="portfolio__controls">
+     	        	<button type='button 'class="portfolio__arrow portfolio__arrow_left _icon-arrow"></button>
+     	        	<button type='button 'class="portfolio__arrow portfolio__arrow_right _icon-arrow"></button>
+     	        </div>
+       		</div>
+       		<div class="portfolio__slider swiper " >
+       			<div class="portfolio__wrapper swiper-wrapper">
+       				<div class="portfolio__slide swiper-slide">
+       					<article class="slide-portfolio">
+       						<a href="" class="slide-portfolio__image ibg">
+       							<img src="img/slider/slider1.jpg" alt="slide">
+       						</a>
+       						<div class="slide-portfolio__body">
+       							<h4 class="slide-portfolio__title">
+       								<a href="" class="slide-portfolio__link-title">Agency Website.</a>
+       							</h4>
+                                 <div class="slide-portfolio__footer">
+                                 	<a href="" class="slide-portfolio__category">WordPress</a>
+                                 	<a href="" class="slide-portfolio__link _icon-link"></a>
+                                 </div>
+       						</div>
+       					</article>
+       				</div>
+                  <div class="portfolio__slide swiper-slide">
+       					<article class="slide-portfolio">
+       						<a href="" class="slide-portfolio__image ibg">
+       							<img src="img/slider/slider2.jpg" alt="slide">
+       						</a>
+       						<div class="slide-portfolio__body">
+       							<h4 class="slide-portfolio__title">
+       								<a href="" class="slide-portfolio__link-title">Dashboard Website.</a>
+       							</h4>
+                                 <div class="slide-portfolio__footer">
+                                 	<a href="" class="slide-portfolio__category">React</a>
+                                 	<a href="" class="slide-portfolio__link _icon-link"></a>
+                                 </div>
+       						</div>
+       					</article>
+       				</div>
+       				<div class="portfolio__slide swiper-slide">
+       					<article class="slide-portfolio">
+       						<a href="" class="slide-portfolio__image ibg">
+       							<img src="img/slider/slider3.jpg" alt="slide">
+       						</a>
+       						<div class="slide-portfolio__body">
+       							<h4 class="slide-portfolio__title">
+       								<a href="" class="slide-portfolio__link-title">Support Center Website.</a>
+       							</h4>
+                                 <div class="slide-portfolio__footer">
+                                 	<a href="" class="slide-portfolio__category">PHP</a>
+                                 	<a href="" class="slide-portfolio__link _icon-link"></a>
+                                 </div>
+       						</div>
+       					</article>
+       				</div>
        
+       			</div>
+       		</div>
+       	</div>
+       </section>
      </main>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src='js/script.js'></script>
 </body>
 </html>
