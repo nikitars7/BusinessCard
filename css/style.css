@@ -1133,3 +1133,104 @@ body {
     color: #7E74F1;
   }
 }
+
+.page__comments {
+  background-color: #FBFBFB;
+  margin-top: calc(70px + 106 * (100vw - 768px) / 1152);
+}
+
+.comments__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 104px;
+  padding-bottom: 153px;
+}
+
+.comments__title {
+  margin-bottom: calc(80px + 52 * (100vw - 768px) / 1152);
+}
+
+.comments__content {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  row-gap: 80px;
+  -webkit-column-gap: calc(15px + 33 * (100vw - 768px) / 1152);
+     -moz-column-gap: calc(15px + 33 * (100vw - 768px) / 1152);
+          column-gap: calc(15px + 33 * (100vw - 768px) / 1152);
+}
+
+.item-comments {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: calc(10px + 28 * (100vw - 768px) / 1152);
+  padding-right: calc(10px + 28 * (100vw - 768px) / 1152);
+  padding-bottom: 24px;
+}
+
+.item-comments__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 96px;
+  height: 96px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: -48px;
+}
+.item-comments__avatar img {
+  display: block;
+}
+.item-comments__avatar:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.item-comments__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #232e35;
+}
+.item-comments__text:not(:last-child) {
+  margin-bottom: calc(20px + 28 * (100vw - 768px) / 1152);
+}
+
+.item-comments__name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  color: #232e35;
+}
+.item-comments__name:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.item-comments__profession {
+  color: #656d72;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  padding: 4px 8px;
+  background: #FBFBFB;
+  border-radius: 4px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
