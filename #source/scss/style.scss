@@ -646,3 +646,122 @@ display: inline-block;
     border-radius: 4px;
     align-self: start;
 }
+
+.page__skills {
+
+
+}
+.skills {}
+.skills__container {
+	 padding-top: 105px;
+     padding-bottom: 176px;
+}
+.skills__title {
+	margin-bottom:calc(40px + (112 - 40) * ((100vw - 768px)/(1920 - 768)));
+}
+.skills__body {
+	display: grid;
+	gap:30px;
+	@media (min-width: 767px) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+.skills__period {}
+.period {
+	display: grid;
+	gap:64px;
+	position: relative;
+	&::before{
+		position: absolute;
+		content:'';
+		left: 12px;
+		top: 0;
+		height: 100%;
+		width: 1px;
+		background-color: #f1f1f1;
+	}
+}
+.period__item {
+	padding-left: 40px;
+	position: relative;
+	&::before{
+		position: absolute;
+		content:'';
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: #f1f1f1;
+		left: 4px;
+		top: 1px;
+	}
+	&:last-child{
+		&::after{
+			content:'';
+			position: absolute;
+			width: 1px;
+			height: 80%;
+			left: 12px;
+			bottom: 0;
+			background-color: #fff;
+		}
+	}
+}
+.period__title {
+	line-height: 1.25;
+	font-weight: 500;
+	color:$mainColor;
+	&:not(:last-child){
+		margin-bottom: 10px;
+	}
+}
+.period__text {
+	color:$secondColor;
+	font-size: 14px;
+	line-height: 1.21;
+	&:not(:last-child){
+		margin-bottom: 24px;
+	}
+}
+.period__date {
+	color:$mainColor;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.06;
+}
+.skills__content {}
+.content {}
+.content__text {
+color:$secondColor;
+line-height: 1.6;
+
+	&:not(:last-child){
+		margin-bottom:calc(20px + (64 - 20) * ((100vw - 768px)/(1920 - 768)));
+	}
+}
+.content__items {
+	display: grid;
+	gap:calc(20px + (40 - 20) * ((100vw - 768px)/(1920 - 768)));
+}
+.content__item {}
+.content__label {
+	color:$mainColor;
+	line-height: 1.06;
+	font-weight: 500;
+	&:not(:last-child){
+		margin-bottom:16px;
+	}
+}
+.content__line {
+	background-color: #f5f3fe;
+	border-radius: 0px 2px 2px 0px;
+	height: 8px;
+	position: relative;
+	span{
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 0px 2px 2px 0px;
+		background-color: #7E74F1;
+	}
+}

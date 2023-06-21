@@ -1234,3 +1234,127 @@ body {
       -ms-grid-row-align: start;
       align-self: start;
 }
+
+.skills__container {
+  padding-top: 105px;
+  padding-bottom: 176px;
+}
+
+.skills__title {
+  margin-bottom: calc(40px + 72 * (100vw - 768px) / 1152);
+}
+
+.skills__body {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+@media (min-width: 767px) {
+  .skills__body {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.period {
+  display: -ms-grid;
+  display: grid;
+  gap: 64px;
+  position: relative;
+}
+.period::before {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #f1f1f1;
+}
+
+.period__item {
+  padding-left: 40px;
+  position: relative;
+}
+.period__item::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  left: 4px;
+  top: 1px;
+}
+.period__item:last-child::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  left: 12px;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.period__title {
+  line-height: 1.25;
+  font-weight: 500;
+  color: #232e35;
+}
+.period__title:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.period__text {
+  color: #656d72;
+  font-size: 14px;
+  line-height: 1.21;
+}
+.period__text:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.period__date {
+  color: #232e35;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.06;
+}
+
+.content__text {
+  color: #656d72;
+  line-height: 1.6;
+}
+.content__text:not(:last-child) {
+  margin-bottom: calc(20px + 44 * (100vw - 768px) / 1152);
+}
+
+.content__items {
+  display: -ms-grid;
+  display: grid;
+  gap: calc(20px + 20 * (100vw - 768px) / 1152);
+}
+
+.content__label {
+  color: #232e35;
+  line-height: 1.06;
+  font-weight: 500;
+}
+.content__label:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.content__line {
+  background-color: #f5f3fe;
+  border-radius: 0px 2px 2px 0px;
+  height: 8px;
+  position: relative;
+}
+.content__line span {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0px 2px 2px 0px;
+  background-color: #7E74F1;
+}
