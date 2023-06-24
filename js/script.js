@@ -44,7 +44,7 @@ tabsBtn.forEach(function(item){
    let tabId = currentBtn.getAttribute("data-tab");
    let currentTab = document.querySelector(tabId);
 
-   if( ! currentBtn.classList.contains('active')){
+   if(!currentBtn.classList.contains('active')){
  tabsBtn.forEach(function(item){
       item.classList.remove('active');
       item.classList.remove('_icon-arrow');
@@ -64,6 +64,59 @@ tabsBtn.forEach(function(item){
 });
 
 document.querySelector('.experience__nav-btn').click();
-   
+
+
+const form = document.querySelector('.form');
+const inputName = form.elements[0];
+const formButton = document.querySelector('.form__button');
+const inputNameError = document.createElement('span');
+const inputEmailError = document.createElement('span');
+const formItemName = document.getElementById('name');
+const formItemEmail = document.getElementById('email');
+const errorMessage = document.createElement('span');
+inputName.addEventListener('change', (event) => {
+   let eventValue = event.target.value;
+   if(event.target.value.length < 1 || eventValue.trim() === ''){
+      inputName.classList.add('error')
+      if(!formItemName.contains(errorMessage)){
+       errorMessage.innerHTML = 'Invalid name';
+       formItemName.append(errorMessage)
+      }
+      if(inputName.classList.contains('green')){
+   inputName.classList.remove('green')
+ }
+   }else{
+      inputName.classList.remove('error')
+      inputName.classList.add('green')
+      if(formItemName.contains(errorMessage)){
+      formItemName.removeChild(errorMessage)
+      }
+   }
+})
+const inputEmail = form.elements[1];
+inputEmail.addEventListener('change',checkValue);
+
+function checkValue (e) { 
+ const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+ if(!re.test(String(e.target.value).toLowerCase())){
+ inputEmail.classList.add('error')
+  if(!formItemEmail.contains(errorMessage)){
+       errorMessage.innerHTML = 'Invalid email';
+       formItemEmail.append(errorMessage)
+      }
+ if(inputEmail.classList.contains('green')){
+   inputEmail.classList.remove('green')
+ }
+ }else{
+    inputEmail.classList.remove('error')
+     inputEmail.classList.add('green')
+     if(formItemEmail.contains(errorMessage)){
+      formItemEmail.removeChild(errorMessage)
+      }
+ }
+}
+
+
+
 
 
