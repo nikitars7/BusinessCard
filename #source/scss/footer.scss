@@ -1,0 +1,19 @@
+.footer {}
+.footer__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction:column;
+	padding-bottom:calc(30px + (88 - 30) * ((100vw - 768px)/(1920 - 768)));	
+	padding-top: calc(30px + (88 - 30) * ((100vw - 768px)/(1920 - 768)));
+	gap:24px;
+}
+.footer__social {
+	.social__link{
+		color:#656d72;
+	}
+}
+.footer__copyright{
+color:#656d72;
+font-size: 14px;
+}

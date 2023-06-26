@@ -366,6 +366,34 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: calc(30px + 58 * (100vw - 768px) / 1152);
+  padding-top: calc(30px + 58 * (100vw - 768px) / 1152);
+  gap: 24px;
+}
+
+.footer__social .social__link {
+  color: #656d72;
+}
+
+.footer__copyright {
+  color: #656d72;
+  font-size: 14px;
+}
+
 .ibg {
   background-repeat: no-repeat;
   background-size: cover;
@@ -816,6 +844,12 @@ body {
   padding-top: 107px;
   padding-bottom: 123px;
 }
+@media (max-width: 767px) {
+  .experience__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
 
 .experience__body {
   display: -ms-grid;
@@ -1153,6 +1187,12 @@ body {
   padding-top: 104px;
   padding-bottom: 153px;
 }
+@media (max-width: 767px) {
+  .comments__container {
+    padding-bottom: 30px;
+    padding-top: 40px;
+  }
+}
 
 .comments__title {
   margin-bottom: calc(80px + 52 * (100vw - 768px) / 1152);
@@ -1238,6 +1278,12 @@ body {
 .skills__container {
   padding-top: 105px;
   padding-bottom: 176px;
+}
+@media (max-width: 767px) {
+  .skills__container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
 }
 
 .skills__title {
@@ -1377,6 +1423,12 @@ body {
   padding-top: 104px;
   padding-bottom: 134px;
 }
+@media (max-width: 767px) {
+  .contacts__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
 
 .contacts__content {
   display: -ms-grid;
@@ -1510,6 +1562,15 @@ textarea.form__input {
 @media (any-hover: hover) {
   .form__button:hover {
     background-color: #645bca;
+  }
+}
+.form__button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+@media (any-hover: hover) {
+  .form__button:disabled:hover {
+    background-color: #7E74F1;
   }
 }
 

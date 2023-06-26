@@ -74,12 +74,61 @@ const inputEmailError = document.createElement('span');
 const formItemName = document.getElementById('name');
 const formItemEmail = document.getElementById('email');
 const errorMessage = document.createElement('span');
+const errorMessageEmail = document.createElement('span');
+
+const onFormSubmit = (event) => {
+event.preventDefault();
+if(!inputName.classList.contains('green') && !inputEmail.classList.contains('green')){
+   formButton.disabled = 'true';
+    inputName.classList.add('error')
+      if(!formItemName.contains(errorMessage)){
+       errorMessage.innerHTML = 'Enter your name';
+       formItemName.append(errorMessage)
+      }
+       inputEmail.classList.add('error')
+  if(!formItemEmail.contains(errorMessageEmail)){
+       errorMessageEmail.innerHTML = 'Invalid email';
+       formItemEmail.append(errorMessageEmail)
+      }
+}
+if(!inputName.classList.contains('green')){
+   formButton.disabled = 'true';
+    inputName.classList.add('error')
+      if(!formItemName.contains(errorMessage)){
+       errorMessage.innerHTML = 'Enter your name';
+       formItemName.append(errorMessage)
+      }
+}else if(!inputEmail.classList.contains('green')){
+   formButton.disabled = 'true';
+   inputEmail.classList.add('error')
+  if(!formItemEmail.contains(errorMessageEmail)){
+       errorMessageEmail.innerHTML = 'Invalid email';
+       formItemEmail.append(errorMessageEmail)
+      }
+}
+}
+
+inputName.addEventListener('blur',(event)=>{
+if(event.target.value.length === 0){
+    inputName.classList.add('error')
+     formButton.disabled = 'true';
+      if(!formItemName.contains(errorMessage)){
+       errorMessage.innerHTML = 'Enter your name';
+       formItemName.append(errorMessage)
+      }
+}
+if(inputName.classList.contains('green') && inputEmail.classList.contains('green')){
+   formButton.removeAttribute('disabled')
+}
+})
+form.addEventListener('submit',onFormSubmit)
+
 inputName.addEventListener('change', (event) => {
    let eventValue = event.target.value;
-   if(event.target.value.length < 1 || eventValue.trim() === ''){
+   if(event.target.value.length === 0 || eventValue.trim() === ''){
       inputName.classList.add('error')
       if(!formItemName.contains(errorMessage)){
-       errorMessage.innerHTML = 'Invalid name';
+       errorMessage.innerHTML = 'Enter your name';
        formItemName.append(errorMessage)
       }
       if(inputName.classList.contains('green')){
@@ -93,16 +142,31 @@ inputName.addEventListener('change', (event) => {
       }
    }
 })
+
+
 const inputEmail = form.elements[1];
 inputEmail.addEventListener('change',checkValue);
 
+inputEmail.addEventListener('blur',(event)=>{
+if(event.target.value.length === 0){
+    inputEmail.classList.add('error')
+     formButton.disabled = 'true';
+      if(!formItemEmail.contains(errorMessageEmail)){
+       errorMessageEmail.innerHTML = 'Invalid email';
+       formItemEmail.append(errorMessageEmail)
+      }
+}
+if(inputEmail.classList.contains('green') && inputName.classList.contains('green')){
+   formButton.removeAttribute('disabled')
+}
+})
 function checkValue (e) { 
  const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
  if(!re.test(String(e.target.value).toLowerCase())){
  inputEmail.classList.add('error')
-  if(!formItemEmail.contains(errorMessage)){
-       errorMessage.innerHTML = 'Invalid email';
-       formItemEmail.append(errorMessage)
+  if(!formItemEmail.contains(errorMessageEmail)){
+       errorMessageEmail.innerHTML = 'Invalid email';
+       formItemEmail.append(errorMessageEmail)
       }
  if(inputEmail.classList.contains('green')){
    inputEmail.classList.remove('green')
@@ -110,8 +174,8 @@ function checkValue (e) {
  }else{
     inputEmail.classList.remove('error')
      inputEmail.classList.add('green')
-     if(formItemEmail.contains(errorMessage)){
-      formItemEmail.removeChild(errorMessage)
+     if(formItemEmail.contains(errorMessageEmail)){
+      formItemEmail.removeChild(errorMessageEmail)
       }
  }
 }

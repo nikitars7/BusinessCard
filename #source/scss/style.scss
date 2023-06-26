@@ -2,6 +2,7 @@
 @import 'iconfonts.scss';
 @import 'bemCommon.scss';
 @import 'header.scss';
+@import 'footer.scss';
 @import 'ibg.scss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
@@ -333,6 +334,10 @@ transition: color 0.3s ease 0s;
 	flex-direction:column;
 	padding-top:107px;
 	padding-bottom:123px;	
+	@media (max-width: 767px) {
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
 }
 .experience__body{
     display: grid;
@@ -584,6 +589,10 @@ display: inline-block;
 	justify-content: center;
 	padding-top: 104px;
 	padding-bottom: 153px;
+	@media (max-width: 767px) {
+		padding-bottom: 30px;
+		padding-top: 40px;
+	}
 }
 .comments__title {
 	margin-bottom:calc(80px + (132 - 80) * ((100vw - 768px)/(1920 - 768)));
@@ -655,6 +664,10 @@ display: inline-block;
 .skills__container {
 	 padding-top: 105px;
      padding-bottom: 176px;
+     @media (max-width: 767px) {
+     	padding-top: 30px;
+     	padding-bottom: 50px;
+     }
 }
 .skills__title {
 	margin-bottom:calc(40px + (112 - 40) * ((100vw - 768px)/(1920 - 768)));
@@ -776,6 +789,10 @@ line-height: 1.6;
 	justify-content: center;
 	padding-top: 104px;
 	padding-bottom: 134px;
+	@media (max-width: 767px) {
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
 }
 .contacts__content{
 	display: grid;
@@ -856,6 +873,14 @@ textarea.form__input{
 &:hover{
   background-color: #645bca;
 } }
+&:disabled{
+	opacity: 0.5;
+	cursor: auto;
+	@media (any-hover:hover) {
+&:hover{
+  background-color: #7E74F1;
+} }
+}
 }
 .contacts__body {
 	padding-left:calc(20px + (105 - 20) * ((100vw - 768px)/(1920 - 768)));
