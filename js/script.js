@@ -128,7 +128,7 @@ if(event.target.value.length === 0){
     invalidEmail();
    formButton.disabled = 'true';
 }
-if(inputEmail.classList.contains('green') && inputName.classList.contains('green')){
+if(inputEmail.classList.contains('green') && inputName.classList.contains('green') ){
    formButton.removeAttribute('disabled')
 }
 })
@@ -164,4 +164,19 @@ function invalidEmail (){
       }
 }
 
+
+// smooth anchors 
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for(let anchor of anchors){
+   anchor.addEventListener('click',(e) => {
+      e.preventDefault();
+
+      const titleId = anchor.getAttribute('href').substr(1)
+      document.getElementById(titleId).scrollIntoView({
+         behaviour:"smooth",
+         block:'start'
+      })
+   })
+}
 
